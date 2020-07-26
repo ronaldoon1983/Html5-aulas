@@ -1,15 +1,60 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap'); /*fonte baixda do google*/
+@font-face{
+    font-family: 'FonteLogo'; /* nome da fonte externa*/
+    src: url(../_fonts/bubblegum-sans-regular.otf); /* local da fonte externa*/
+}
 
-p {
+p{
     text-align: justify;
-    text-indent: 50px;
+    text-indent: 51px;
 }
-h1 {
-    text-align: center;
+
+header#cabecalho img#icone{ /*posicionamento imagem com id icone*/
+
+    position: absolute; /*posições */
+    left: 910px;
+    top: 75px;
 }
+
+header#cabecalho {
+border-bottom: 1px #606060 solid; /*linha de separação do cabaçalho*/
+height: 150px;/*altura da linha*/
+background: url("../_imagens/glass-logo-peq.jpg")no-repeat 0px 80px; /*colocar img pelo css*/
+}
+
+header#cabecalho h1{
+
+    font-family: FonteLogo, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+
+    font-family: 'Titillium Web', sans-serif; /*fonte baixada do google*/
+    font-size: 10pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+
 body {
-    background: hsla(165, 81%, 93%, 1);
+    background-color: #dddddd;
     color: rgba(0, 0, 0, 1);
+    text-align: justify;
+
+}
+
+div#interface{ /*pagina dentro do DIv*/
+    width: 900px; /*largura da pagina*/
+    background-color: white; /*cor de fundo pagina*/
+    margin: -20px auto 0px auto; /*margens externa da pagina*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5); /*sombra trnparente*/
+    padding: 10px; /* borda interna todos os lados */
 
 }
 
@@ -27,18 +72,88 @@ figure.foto-legenda img {
 }
 
 figure.foto-legenda figcaption {
-    opacity: 0;
+    opacity: 10;
     position: absolute;
     top:0px;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0,0,0,.5);
     color: white;
     width: 100%;
-    height: 100%;
+    height: 100%;   
     padding:10px;
     box-sizing: border-box;
-    transition: opacity 1s;
+    transition: opacity 2s;
 }
 
 figure.foto-legenda:hover figcaption{
-    opacity: 1;
+    opacity: 0;
+}
+
+/*formatacao Menu*/
+
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 300px;
+}
+nav#menu li {
+
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover{
+background-color: #606060;
+}
+nav#menu h1{
+    display: none;
+}
+
+nav#menu a{
+
+    color: #000000;
+    text-decoration: none;
+    
+}
+
+nav#menu a:hover{  
+color: white;
+text-decoration: underline;
+
+}
+
+section#corpo{
+
+    display: block; /*exibir pagina em bloco*/
+    width: 500px;/*largura da pagina*/
+    float: left; /*posicionar esquerda*/
+    border-right: 1px solid #606060; /*criar linha vertical*/
+    padding-right: 20px; /* separar linha do texto*/
+
+}
+
+aside#lateral{
+
+    display: block;
+    width: 350px;
+    float: right;/*posicionar direita*/
+}
+
+footer#rodape{
+
+    clear: both; /*Rodape, limpa as configuração do dois acima e erruma a pagina*/
+    border-top: 1px solid #606060; /*linha a cima*/
+    
+}
+
+footer#rodape p{
+    text-align: center;
 }
